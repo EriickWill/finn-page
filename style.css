@@ -1,0 +1,473 @@
+/*Global Styles -------------------------------*/
+@font-face {
+  font-family: Meta;
+  src: url("./fonts/FFMetaProCondRg.TTF");
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+}
+.container{
+  max-width: 192.0rem;
+  width:100%;
+  padding-inline: 2%;
+  margin-inline: auto;
+
+}
+html body{
+  background: white;
+}
+.button-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 44px;
+  background: #D2F65A;
+  font-size: 14px;
+  font-family: "Clash Display";
+  border: none;
+  cursor: pointer;
+}
+/*End Global Styles -------------------------------*/
+.loader-on{
+  overflow-y: hidden;
+}
+.loader-off{
+  overflow-y:scroll;
+}
+.loader_off{
+  display: none;
+}
+.loader{
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.loader p{
+  font-size: 2vw;
+  font-family: "Clash Display";
+  z-index: 1000;
+}
+.loader .overlay{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+}
+.loader .overlay .bar{
+ 
+  width: 10vw;
+  height: 100%;
+  background: #D2F65A;
+  
+}
+
+/*NavBar Styles -----------------------------------*/
+
+header{
+  width: 100%;
+  height: 10.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul {
+  display: flex;
+  gap: 3.2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav ul a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  font-family: Meta;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* End NavBar Styles -----------------------------------*/
+
+/* Hero Styles -----------------------------------*/
+
+.name{
+  width: 100%;
+}
+.hero{
+  font-family:'Clash Display', sans-serif;
+  text-transform: uppercase;
+  
+ 
+}
+.hero h3{
+  font-size: 4.8rem;
+  margin-top: 1.6rem;
+}
+/*End Hero Styles -----------------------------------*/
+
+
+/*Product Header Styles -----------------------------------*/
+.productHeader{
+  margin-top: 3.2rem;
+}
+.productHeader img{
+  width: 100%;
+  height: 130vh;
+  object-fit: cover;
+}
+.slider-top{
+  width: 100%;
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #D2F65A;
+  overflow: hidden;
+}
+.slider-top .containerSlider{
+  width: 100%;
+  display: flex;
+  width: fit-content;
+  flex: auto;
+  justify-content: flex-start;
+  white-space:nowrap ;
+  flex-direction: row;
+  gap:1.5rem;
+  animation: move-rtl 15s linear infinite;
+}
+.slider-top .containerSlider p{
+  font-size: 1.2rem;
+  font-family:'Clash Display', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  
+}
+/*Product Header Styles -----------------------------------*/
+
+@keyframes move-rtl{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+
+}
+
+/*informations --------------------------------------------*/
+
+
+.informations{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:96px;
+  margin-top: 96px;
+  flex-wrap: wrap;
+}
+
+.information{
+  max-width: 250px;
+  min-width: 200px;
+  width: 100%;
+
+}
+.information hr{
+  height: 3px;
+  background: #000;
+  border: none;
+}
+.information h3{
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: Meta;
+  margin-top: 20px;
+}
+.information p{
+  font-size: 80px;
+  font-family: "Clash Display";
+  font-weight: 900;
+}
+.information p span{
+  margin-left: 5px;
+  color: #D2F65A;
+}
+@media (max-width:1000px) {
+  .informations{
+    justify-content: center;
+    gap:96px;
+
+  }
+  
+}
+
+
+
+.logos{
+  margin-top: 128px;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logos img{
+ width: 100%;
+}
+/*Services ------------------------------------------*/
+.services{
+  display: flex;
+  width: 100%;
+  min-height: 752px;
+  margin-top: 160px;
+  flex-wrap: wrap;
+}
+.services-brand{
+  width: 50%;
+}
+.services-brand h2{
+  font-size: 80px;
+  font-family: "Clash Display";
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.services-cards{
+  width: 50%;
+  min-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:32px;
+  
+}
+@media (max-width:1000px) {
+  .services-brand{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .services{
+    align-items: center;
+    justify-content: center;
+  }
+}
+.services-card{
+  background: #F8F8F8;
+  min-height: 243px;
+  height: 100%;
+  padding: 48px;
+}
+.services-card h3{
+  font-size: 32px;
+  font-family: "Clash Display";
+  text-transform: uppercase;
+  margin-bottom: 18px;
+
+}
+.services-card p{
+  font-size: 18px;
+  font-family: "Inter";
+}
+
+/**/
+
+
+.slider-bot{
+  width: 100%;
+  margin-top: 160px;
+  border-top: 2px solid black;
+  margin-bottom:48px ;
+  display: flex;
+  overflow: hidden;
+}
+.slider-bot .containerSlider{
+  display: flex;
+  gap:16px;
+  animation: move-rtl 15s linear infinite;
+}
+.slider-bot .containerSlider p{
+  font-size: 48px;
+  font-family: "Clash Display";
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+/**/
+
+.works{
+  min-height: 966px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  gap:16px;
+  margin-bottom: 46px;
+
+}
+.works .work{
+  width: 50%;
+  height: 100%;
+}
+.works .work .img{
+  max-width: 904px;
+  height: 800px;
+  background: gray;
+  border: white 5px solid;
+  transition: all 0.5s ease-in-out;
+}
+.works .work .img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.works .work .img:hover{
+  border: #D2F65A 5px solid;
+}
+.works .work h3{
+  font-size: 24px;
+  font-family: "Clash Display";
+  text-transform: uppercase;
+  border: white 5px solid;
+}
+.works .work p{
+  font-size: 13px;
+  color: #1919199c;
+  font-family: "Clash Display";
+  text-transform: uppercase;
+  border: white 5px solid;
+}
+@media (max-width:800px) {
+  .works{
+    flex-wrap: wrap;
+  }
+  .works .work{
+    width: 100%;
+    height: 100%;
+  }
+}
+/**/
+
+
+.lets-create{
+  height: 638px;
+  width: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lets-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap:32px;
+}
+.lets-container h2{
+  font-size: 96px;
+  font-family: "Clash Display";
+  color: white;
+  text-align: center;
+  max-width: 1000px;
+  text-transform: uppercase;
+}
+.lets-container button{
+  width: 157px;
+  height: 44px;
+  background: #D2F65A;
+  font-size: 14px;
+  font-family: "Clash Display";
+  border: none;
+  cursor: pointer;
+}
+@media (max-width:1000px) {
+  .lets-container h2{
+    font-size: 8vw;
+   
+  }
+}
+/**/
+
+footer{
+  min-height: 504px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: #000;
+}
+.footer-container{
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+
+.links-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+
+}
+.links-footer ul{
+  list-style: none;
+}
+.links-footer li{
+ margin-bottom: 32px;
+ font-size: 13px;
+ font-family: "Clash Display";
+ text-transform: uppercase;
+}
+.links-footer h3{
+  font-size: 20px;
+  font-family: "Clash Display";
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.pages, .utility{
+  width: 364px;
+}
+.pages button{
+  width: 157px;
+  height: 44px;
+  background: #D2F65A;
+  font-size: 14px;
+  font-family: "Clash Display";
+  border: none;
+  cursor: pointer;
+}
+@media (max-width:1000px) {
+  .footer-container .logo{
+    margin-bottom: 50px;
+  }
+  .pages, .utility{
+    width: 164px;
+  }
+}
